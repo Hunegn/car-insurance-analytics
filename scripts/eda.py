@@ -1,6 +1,3 @@
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
 
 class Eda:
     """
@@ -106,11 +103,5 @@ class Eda:
         if 'MSISDN/Number' in self.data.columns:
             print(f"Number of unique users: {self.data['MSISDN/Number'].nunique()}")
 
-
-file = '../Data/clean/cleaned_insurance_data.csv'
-eda = Eda(file)
-eda.inspect_data()
-eda.eda_summary()
-eda.visualize_distribution(columns=['TotalPremium', 'TotalClaims', 'SumInsured'])
-eda.visualize_relationship('TotalPremium', 'TotalClaims')
-eda.generate_report()
+if __name__==__main__:
+    
