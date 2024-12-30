@@ -1,4 +1,6 @@
-
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 class Eda:
     """
     A class for performing Exploratory Data Analysis (EDA) and data cleaning.
@@ -81,7 +83,7 @@ class Eda:
         """
         if x_col in self.data.columns and y_col in self.data.columns:
             plt.figure(figsize=(10, 6))
-            sns.scatterplot(x=self.data[x_col], y=self.data[y_col], alpha=0.7, color='purple')
+            sns.scatterplot(x=self.data[x_col], y=self.data[y_col], alpha=0.7, color='yellow')
             plt.title(f"{x_col} vs. {y_col}")
             plt.xlabel(x_col)
             plt.ylabel(y_col)
@@ -103,5 +105,3 @@ class Eda:
         if 'MSISDN/Number' in self.data.columns:
             print(f"Number of unique users: {self.data['MSISDN/Number'].nunique()}")
 
-if __name__==__main__:
-    
