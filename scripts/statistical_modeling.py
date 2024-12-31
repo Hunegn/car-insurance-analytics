@@ -105,7 +105,7 @@ class StatisticalModeling:
         """
         Execute the full statistical modeling pipeline.
         """
-        # self.prepare_data()
+        self.prepare_data()
         
         lr_model = self.train_linear_regression()
         rf_model = self.train_random_forest()
